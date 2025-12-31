@@ -1,6 +1,8 @@
 
 # This repository is for me to learn some nextJS hope you can learn some too :)
 
+Source: <https://www.youtube.com/watch?v=I1V9YWqRIeI>
+
 ## Create nextJS project
 
 ```console
@@ -101,3 +103,19 @@ folder names that are in parantheses are not show in url path this is used for r
 ## Error.tsx and global-error.tsx
 
 A client will never see a nextJS compiler error in a site deployed to production in routes not found or when web app breaks the user should be routed to a special page that will show relevent content like inviting user to visit other pages or call support and that page that the user will be routed to is called error.tsx to have a single page for all erros you can add global-error.tsx in app folder unlike layout only the closest error.tsx file to the page.tsx file that throws erros will be shown
+
+## forbidden.tsx
+
+As I guessed will be shown on error 403 messages
+
+## unauthorized.tsx
+
+Will be shown on error 401 messages
+
+## loader.tsx
+
+Page to show when the page loads and the client with slow internet is getting the page
+
+## Data fetching
+
+<!-- TODO The example here thoght I know react well I don't -->
