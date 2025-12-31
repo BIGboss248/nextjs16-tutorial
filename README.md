@@ -49,3 +49,13 @@ where package dependencies are stored
 ### [app](./app/)
 
 where we store app codes
+
+
+## Home page
+
+code for pages are stored in page.tsx files you can use `rafce` to use code snippet to create a boilerplate to start coding from that
+
+## layout.tsx
+
+Setting that will be applied to all pages
+
