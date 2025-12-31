@@ -52,11 +52,11 @@ where we store app codes
 
 ## Home page
 
-code for pages are stored in page.tsx files you can use `rafce` to use code snippet to create a boilerplate to start coding from that
+code for pages are stored in page.tsx files you can use `rafce` to use code snippet to create a react functional component used for home page
 
 ## layout.tsx
 
-Setting that will be applied to all pages
+Setting that will be applied to all pages in and under that subfolder usefull for setting UI elements for all pages like nav bar, footers etc...
 
 ## Serverside vs client side
 
@@ -93,3 +93,7 @@ const User = async ({ params }: { params: Promise<{ id: string }> }) => {
 
 export default User
 ```
+
+### Route groups
+
+folder names that are in parantheses are not show in url path this is used for routes grouping for example if you want to change layout for a group of pages you can create a routing group create layout.tsx in it and apply your specific layout
