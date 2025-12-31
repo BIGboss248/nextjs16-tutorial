@@ -50,7 +50,6 @@ where package dependencies are stored
 
 where we store app codes
 
-
 ## Home page
 
 code for pages are stored in page.tsx files you can use `rafce` to use code snippet to create a boilerplate to start coding from that
@@ -59,3 +58,19 @@ code for pages are stored in page.tsx files you can use `rafce` to use code snip
 
 Setting that will be applied to all pages
 
+## Serverside vs client side
+
+The idea about a server side component is that the component is rendered on server and sent to client improving SEO and performance
+
+### Where to use client side component
+
+by default all the components are server side untill specifed by `'use client'` directive to the top of the tsx file
+A good rule is to make a component client side if compiler throws an error
+
+## Install babel plugin
+
+```console
+npm install babel-plugin-react-compiler@latest
+```
+
+in next.config.ts set reactCompiler to true
