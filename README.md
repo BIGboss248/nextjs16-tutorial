@@ -119,3 +119,7 @@ Page to show when the page loads and the client with slow internet is getting th
 ## Data fetching
 
 <!-- TODO The example here thoght I know react well I don't -->
+
+## API routes
+
+In NextJS setting up and API is easy! you just create route.tsx as the api is usually in /api route you can create a folder in /app named api and add route.tsx to it then you can create functions for diffrent API operations
