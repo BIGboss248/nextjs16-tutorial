@@ -74,3 +74,22 @@ npm install babel-plugin-react-compiler@latest
 ```
 
 in next.config.ts set reactCompiler to true
+
+## Routing
+
+NextJS dose directory based routing meaning to create a new route create a new folder in /app directory and add a page.tsx the function that has 'export default' will return the page contents
+
+### Dynamic routing
+
+Some times we need the route to be generated based on our program for example when we want to veiw user details we want to navigate to website/username to view users details for this we create routes enclosed in square brackets [] and place the parameter inside those brackets for our example we create a folder named `[username]` then in page funciton we get the user name via params
+
+```TypeScript
+const User = async ({ params }: { params: Promise<{ id: string }> }) => {
+    const { id } = await params;
+    return (
+        <div>User{id}</div>
+    )
+}
+
+export default User
+```
