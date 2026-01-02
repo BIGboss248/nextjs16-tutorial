@@ -1,8 +1,8 @@
 const Home = () => {
   return (
-    <div className='text-3xl'>
+    <h1 className='text-3xl'>
       welcome to nextJS 16
-    </div>
+    </h1>
   )
 }
 
