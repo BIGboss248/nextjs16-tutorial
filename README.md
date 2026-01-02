@@ -52,6 +52,10 @@ where package dependencies are stored
 
 where we store app codes
 
+### [global.csss](./app/globals.css)
+
+Set a design for any element you wish to be applied to all elements on that site
+
 ## Home page
 
 code for pages are stored in page.tsx files you can use `rafce` to use code snippet to create a react functional component used for home page
@@ -202,3 +206,7 @@ Store relevent metadata in files in the `/app` directory the names have to be re
 to see the list of all files check nextJS docs
 
 filebased metadata has priority and will overwrite config based metadata
+
+## React components
+
+A good source to get cool components to use on websites is [reactbits](https://reactbits.dev/)
