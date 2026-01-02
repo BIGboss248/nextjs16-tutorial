@@ -1,3 +1,5 @@
+import ExploreBtn from "@/components/ExploreBtn"
+
 const Home = () => {
   return (
     <section>
@@ -8,6 +10,7 @@ const Home = () => {
       <p className="text-center mt-5">
         Hacakthons, meetups, and confrences all in one place
       </p>
+      <ExploreBtn />
     </section>
   )
 }
