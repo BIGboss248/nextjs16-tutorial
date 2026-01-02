@@ -240,3 +240,18 @@ This is where components will be stored that we want to reuse across site this m
 ## React components
 
 A good source to get cool components to use on websites is [reactbits](https://reactbits.dev/)
+
+## Posthog
+
+Analytics tool to:
+
+1. Track user behaviour
+2. See features performance
+3. Monitor erros in real time
+4. Capture valuable metrics
+
+The idea about adding PostHog early before any future development is to start gathering and analyzing data sooner allowing to analyze and see data regarding each new feature we add
+
+### integrate posthog with nextJS
+
+go to <https://eu.posthog.com> sign in to your account and follow instructions to integrate posthog with platform (nextJS in this case)
