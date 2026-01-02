@@ -3,6 +3,32 @@
 
 Source: <https://www.youtube.com/watch?v=I1V9YWqRIeI>
 
+## JS, JSX, TS, TSX what are they?
+
+well we already know with javascript we can change and manipulate data on web pages and we know react is a library allowing us to create webpage elements easier
+
+### JSX
+
+JSX introduced by react allow easier syntax when trying to create elements with react
+
+```jsx
+const element = <h1>Hello, world!</h1>;
+```
+
+After transpilation, it becomes:
+
+```javascript
+const element = React.createElement('h1', null, 'Hello, world!');
+```
+
+### TS
+
+A language developed by microsoft that adds static types to javascript allowing developers to catch bugs early typescript will be compiled to javascript to run on browsers
+
+### TSX
+
+baisclly combining jsx and ts together allowing to write react components using jsx and ts together
+
 ## Create nextJS project
 
 ```console
@@ -206,6 +232,10 @@ Store relevent metadata in files in the `/app` directory the names have to be re
 to see the list of all files check nextJS docs
 
 filebased metadata has priority and will overwrite config based metadata
+
+## [Components](./components/)
+
+This is where components will be stored that we want to reuse across site this means navbars. buttons etc...
 
 ## React components
 
