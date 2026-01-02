@@ -255,3 +255,5 @@ The idea about adding PostHog early before any future development is to start ga
 ### integrate posthog with nextJS
 
 go to <https://eu.posthog.com> sign in to your account and follow instructions to integrate posthog with platform (nextJS in this case)
+
+**REMEMBER Ublock origin blocks posthog requests disable it during development so posthog works**
