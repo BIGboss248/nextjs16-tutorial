@@ -123,3 +123,32 @@ Page to show when the page loads and the client with slow internet is getting th
 ## API routes
 
 In NextJS setting up and API is easy! you just create route.tsx as the api is usually in /api route you can create a folder in /app named api and add route.tsx to it then you can create functions for diffrent API operations
+
+## Caching
+
+3 types of caching:
+
+1. Browser cache
+   Save static files localy
+2. Server cache
+   Store pre rendered pages and API respones
+3. Data cache
+   Remembers fetched data to avoid repeat requests
+
+### Enable caching
+
+in nextconfig add
+    `cacheComponents: true`
+here you can also define cache lifetime and other properties
+
+for caching you have to mark what you want to cache with `use cache` directive nextJS will cache the output and use it if inputs have not changed
+
+`use cache` can be defined on file, component or function level `use cache` will:
+
+1. Prerender components at build time
+2. Stores them in memory
+3. Revalidates them automaticlly every 15 minutes
+
+Cached items can be grouped by `cacheTag(tagname)` to group them together make it easier to invalidate them or you can use `cacheLife(time)` to set a time to invalidate cache
+
+Also you can use `revalidate()` and `revalidateTag()` to revalidate cache
