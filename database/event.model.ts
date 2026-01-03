@@ -110,7 +110,7 @@ const EventSchema = new Schema<IEvent>(
 );
 
 // Pre-save hook for slug generation and data normalization
-EventSchema.pre('save', function (next) {
+EventSchema.pre('save', function () {
   const event = this as IEvent;
 
   // Generate slug only if title changed or document is new
@@ -127,8 +127,6 @@ EventSchema.pre('save', function (next) {
   if (event.isModified('time')) {
     event.time = normalizeTime(event.time);
   }
-
-  next();
 });
 
 // Helper function to generate URL-friendly slug
@@ -136,17 +134,17 @@ function generateSlug(title: string): string {
   return title
     .toLowerCase()
     .trim()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
-    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+    .replaceAll(/[^a-z0-9\s-]/g, '') // Remove special characters
+    .replaceAll(/\s+/g, '-') // Replace spaces with hyphens
+    .replaceAll(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .replaceAll(/(^-|-$)/g, ''); // Remove leading/trailing hyphens
 }
 
 // Helper function to normalize date to ISO format
 function normalizeDate(dateString: string): string {
   const date = new Date(dateString);
-  if (isNaN(date.getTime())) {
-    throw new Error('Invalid date format');
+  if (Number.isNaN(date.getTime())) {
+    throw new TypeError('Invalid date format');
   }
   return date.toISOString().split('T')[0]; // Return YYYY-MM-DD format
 }
