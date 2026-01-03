@@ -257,3 +257,32 @@ The idea about adding PostHog early before any future development is to start ga
 go to <https://eu.posthog.com> sign in to your account and follow instructions to integrate posthog with platform (nextJS in this case)
 
 **REMEMBER Ublock origin blocks posthog requests disable it during development so posthog works**
+
+## Setup mongoDB
+
+Mongo DB setup is done via mongo atlas database service provided by mongoDB then you can add mongo connection string to your .env file
+
+### Setup database schema
+
+Generally for a backend design architecture you have to ask yourself what a data should do
+
+First we have to see what is the main entity in our app which in this case is an event
+This event will have:
+
+1. a description
+2. location
+3. time and date
+4. who is it for
+5. organizer
+6. picture
+7. tags
+8. slug(url safe identifier)
+
+How do users interact with events?
+
+they book them then what we need for booking
+
+1. Which event was booked
+2. who booked it
+3. when the booking was made
+
