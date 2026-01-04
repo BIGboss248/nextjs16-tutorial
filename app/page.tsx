@@ -1,8 +1,16 @@
 import EventCard from "@/components/EventCard"
 import ExploreBtn from "@/components/ExploreBtn"
-import { events } from "@/lib/constants"
+import { IEvent } from "@/database/event.model";
 
-const Home = () => {
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+const Home = async () => {
+  const response = await fetch(`${BASE_URL}/api/events`);
+  const data = await response.json();
+  const events = data.events ?? [];
+
+
+  console.log(events);
   return (
     <section>
 
@@ -18,12 +26,12 @@ const Home = () => {
 
         <ul className="events">
           {
-            events.map((e) =>
+            events.map((e: IEvent) => (
               <li key={e.title}>
 
                 <EventCard {...e} />
               </li>
-            )
+            ))
           }
         </ul>
 
