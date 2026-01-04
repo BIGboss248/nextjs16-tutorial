@@ -2,6 +2,7 @@ import Event from "@/database/event.model";
 import connectDB from "@/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 import {v2 as cloudinary} from 'cloudinary';
+import { error } from "console";
 
 export async function POST(req: NextRequest) {
     try{
@@ -38,4 +39,14 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({message: "Error creation failed", error: e instanceof Error ? e.message : "Unknown error"}, {status:500});
     }
     
+}
+
+export async function GET(){
+    try{
+        await connectDB();
+        const events = await Event.find().sort({createdAt: -1});
+        return NextResponse.json({message: 'Event fetched successfully', events}, {status:200});
+    } catch (e){
+        return NextResponse.json({message:'Error fetching events', error: e},{status:500})
+    }
 }
