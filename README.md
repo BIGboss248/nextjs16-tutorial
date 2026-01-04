@@ -146,6 +146,12 @@ Will be shown on error 401 messages
 
 Page to show when the page loads and the client with slow internet is getting the page
 
+## .env
+
+Where local variables are stored env variables with `NEXT_PUBLIC` prefix are shared with client
+
+NEXT_PUBLIC_BASE_URL: will contian the procution URL on website launch
+
 ## Data fetching
 
 <!-- TODO The example here thoght I know react well I don't -->
